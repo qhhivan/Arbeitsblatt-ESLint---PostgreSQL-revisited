@@ -9,7 +9,7 @@ const { getAllCocktails } = require('../model/cocktail');
 // Implementiere die Route, welche Namen und Preise aller Cocktails zurückliefert
 
 router.get(
-  '/all_cocktails',
+  '/allcocktails',
   asyncHandler(async (req, res) => {
     const result = await getAllCocktails();
     res.status(result.code).json(result);
