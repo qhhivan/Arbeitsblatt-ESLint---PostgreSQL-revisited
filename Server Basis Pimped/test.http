@@ -1,4 +1,5 @@
 # All Cocktails
 GET http://127.0.0.1:3000/allcocktails
 
-###
+### Zutaten
+GET http://127.0.0.1:3000/Alice/Zutaten

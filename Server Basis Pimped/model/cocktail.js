@@ -9,5 +9,17 @@ async function getAllCocktails() {
   };
 }
 
+// Aufgabe 5
+async function getCocktail(name) {
+  const { rows } = await db.query(
+    'SELECT zbez FROM zutat join besteht on zutat.zid = besteht.zid join cocktail c on besteht.cid = c.cid where cname = $1',
+    [name]
+  );
+  return {
+    code: 200,
+    data: rows,
+  };
+}
+
 // Export
-module.exports = { getAllCocktails };
+module.exports = { getAllCocktails, getCocktail };
