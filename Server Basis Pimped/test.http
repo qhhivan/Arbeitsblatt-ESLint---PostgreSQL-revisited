@@ -3,3 +3,33 @@ GET http://127.0.0.1:3000/allcocktails
 
 ### Zutaten
 GET http://127.0.0.1:3000/Alice/Zutaten
+
+### GET BY PRICE
+GET http://127.0.0.1:3000/cocktail/7.5
+
+### GET per querry
+GET http://127.0.0.1:3000/cocktail?price=6
+
+### DELETE BY NAME
+DELETE http://127.0.0.1:3000/cocktail/Alice
+
+### INSERT COCKTAIL
+POST http://127.0.0.1:3000/newCocktail/
+content-type: application/json
+
+{
+"name":"Hit and Run",
+"preis":12.22,
+"zubereitung":"eo ipso",
+"kid": 1,
+"zgid": 1,
+"sgid": 1
+}
+
+### UPDATE Price
+PATCH http://127.0.0.1:3000/cocktail/TNT
+content-type: application/json
+
+{
+    "preis": 17
+}
